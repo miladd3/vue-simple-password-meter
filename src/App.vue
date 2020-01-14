@@ -1,19 +1,26 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <input type="text" v-model="value">
+    <password-meter :password="value" />
+
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import PasswordMeter from './password-meter.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    PasswordMeter
+  },
+  data() {
+    return {
+      value: null
+    }
   }
 }
+
 </script>
 
 <style>

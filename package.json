@@ -1,12 +1,37 @@
 {
   "name": "vue-simple-password-meter",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.0.8",
+  "description": "A really simple password strength meter. customizable with css",
+  "author": {
+    "name": "Milad Dehghan",
+    "email": "miladd3@gmail.com",
+    "url": "https://github.com/miladd3"
+  },
+  "repository": {
+    "url": "https://github.com/miladd3/vue-simple-password-meter"
+  },
+  "bugs": {
+    "url": "https://github.com/miladd3/vue-simple-password-meter/issues",
+    "email": "miladd3@gmail.com"
+  },
+  "keywords": [
+    "vue",
+    "password",
+    "meter",
+    "simple",
+    "strength"
+  ],
+  "license": "MIT",
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "build:npm": "vue-cli-service build --target lib --name passwordMeter src/password-meter.vue"
   },
+  "main": "dist/passwordMeter.umd.js",
+  "unpkg": "dist/passwordMeter.umd.min.js",
+  "files": ["dist"],
   "dependencies": {
     "core-js": "^3.4.4",
     "vue": "^2.6.10"
@@ -18,7 +43,8 @@
     "babel-eslint": "^10.0.3",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
-    "vue-template-compiler": "^2.6.10"
+    "vue-template-compiler": "^2.6.10",
+    "zxcvbn": "^4.4.2"
   },
   "eslintConfig": {
     "root": true,
