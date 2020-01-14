@@ -1,35 +1,88 @@
 <template>
   <div id="app">
-    <input type="text" v-model="value">
-    <password-meter :password="value" />
+    <div class="wrap">
+      <h1>Vue Simple Password Meter</h1>
+      <p>
+        <b>Vue Simple Passwod Meter</b> is a simple password checker written in
+        vanilla js and extremly lightweight
+      </p>
 
+      <form>
+        <label for="password">Password</label>
+        <input id="password" type="password" v-model="value" />
+        <password-meter :password="value" />
+      </form>
+    </div>
   </div>
 </template>
 
 <script>
-import passwordMeter from './password-meter.vue'
+import passwordMeter from "./password-meter.vue";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
     passwordMeter
   },
   data() {
     return {
       value: null
-    }
+    };
   }
-}
-
+};
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#app .wrap {
+  max-width: 450px;
+  margin: auto;
+}
+
+#app .wrap input {
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  border-radius: 3px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#app p {
+  margin: 16px 0;
+  color: #777;
+  line-height: 1.5;
+}
+
+#app p b {
+  color: #333333;
+}
+
+#app form {
+  margin: 0 25px;
+}
+
+#app form label {
+  display: block;
+  font-size: 12px;
+  text-align: left;
+  margin-bottom: 6px;
 }
 </style>

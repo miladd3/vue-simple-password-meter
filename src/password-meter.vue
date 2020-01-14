@@ -1,7 +1,5 @@
 <template>
-  <div class="po-password-strength-bar" :class="passwordClass">
-    {{ passwordStrength }}
-  </div>
+  <div class="po-password-strength-bar" :class="passwordClass"></div>
 </template>
 
 <script>
