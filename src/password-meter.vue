@@ -1,17 +1,17 @@
 <template>
-  <div class="po-password-strength-bar" :class="passwordClass"></div>
+  <div class="po-password-strength-bar" :class="passwordClass">
+    {{ passwordStrength }}
+  </div>
 </template>
 
 <script>
-
 export default {
+  name: "password-meter",
   props: {
     password: String
   },
   computed: {
-    name: "password-meter",
     passwordStrength() {
-
       if (this.password) return this.checkPassword(this.password);
       return null;
     },
@@ -42,11 +42,13 @@ export default {
       let lowercaseRegex = /(.*[a-z].*)/g;
       let uppercaseRegex = /(.*[A-Z].*)/g;
       let numberRegex = /(.*[0-9].*)/g;
+      let repeatCharRegex = /(\w)(\1+\1+\1+\1+)/g;
 
       let hasSpecialChar = specialCharRegex.test(pass);
       let hasLowerCase = lowercaseRegex.test(pass);
       let hasUpperCase = uppercaseRegex.test(pass);
       let hasNumber = numberRegex.test(pass);
+      let hasRepeatChars = repeatCharRegex.test(pass);
 
       if (pass.length > 4) {
         if ((hasLowerCase || hasUpperCase) && hasNumber) {
@@ -60,18 +62,24 @@ export default {
         if ((hasLowerCase || hasUpperCase || hasNumber) && hasSpecialChar) {
           specialChar = 1;
         }
+        // eslint-disable-next-line no-console
+        console.log(pass.length);
 
         if (pass.length > 8) {
           length = 1;
-        } else if (pass.length > 12) {
+        }
+
+        if (pass.length > 12 && !hasRepeatChars) {
           length = 2;
-        } else if (pass.length > 20) {
+        }
+
+        if (pass.length > 25 && !hasRepeatChars) {
           length = 3;
         }
 
         score = length + specialChar + caseMix + numCharMix;
 
-        if(score > 4) {
+        if (score > 4) {
           score = 4;
         }
       }

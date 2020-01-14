@@ -7,12 +7,12 @@
 </template>
 
 <script>
-import PasswordMeter from './password-meter.vue'
+import passwordMeter from './password-meter.vue'
 
 export default {
   name: 'app',
   components: {
-    PasswordMeter
+    passwordMeter
   },
   data() {
     return {
