@@ -71,5 +71,9 @@ Overwrite these css styles globally and change each state color and style
 
 Since Every other components and libraries mostly were using [zxcvbn](https://github.com/dropbox/zxcvbn) was 799.5kb minified and 388.3 minified and Gzipped so i decided to make simpler approuch and use regex instead of dictionary for validating
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### Licence and cast
+MIT Licence 
+
+
+by [Milad Dehghan](https://dehghan.net)
