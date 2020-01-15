@@ -60,8 +60,6 @@ export default {
         if ((hasLowerCase || hasUpperCase || hasNumber) && hasSpecialChar) {
           specialChar = 1;
         }
-        // eslint-disable-next-line no-console
-        console.log(pass.length);
 
         if (pass.length > 8) {
           length = 1;
