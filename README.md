@@ -2,7 +2,7 @@
 
 **Vue Simple Passwod Meter** is a simple password checker written in vanilla js and extremly lightweight (**3.1kb minified + Gzipped**)
 
-### Demo
+## Demo
 
 [Demo](https://miladd3.github.io/vue-simple-password-meter/)
 
@@ -10,7 +10,7 @@
 
 `npm install vue-simple-password-meter`
 
-### Usage
+## Usage
 
 Simply use v-model and send it to the component using password prop
 
@@ -70,9 +70,18 @@ Overwrite these css styles globally and change each state color and style
 }
 ```
 
-### Motivation
+## Contributing
 
-Since Every other components and libraries mostly were using [zxcvbn](https://github.com/dropbox/zxcvbn) was 799.5kb minified and 388.3 minified and Gzipped so i decided to make simpler approuch and use regex instead of dictionary for validating.
+If you want to contribute to this project simply fork it and clone it then run
+`npm i` 
+in the root of the project, then run
+`npm run serve`
+to run development server.
+
+
+## Motivation
+
+Since Every other components and libraries mostly were using [zxcvbn](https://github.com/dropbox/zxcvbn) was 799.5kb minified and 388.3kb minified and Gzipped so i decided to make simpler approach and use regex instead of dictionary for validating.
 
 ### Licence and cast
 
