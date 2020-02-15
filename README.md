@@ -70,14 +70,52 @@ Overwrite these css styles globally and change each state color and style
 }
 ```
 
+## Events
+
+You can use event `score` to use scored number between `0` to `4` that scores password from risky to secure with 4 is a secure password and 0 is risky and between.
+
+You can use this as a form verification
+
+See below example for more detail
+
+```vue
+<template>
+  <form>
+    <label for="password">Password</label>
+    <input id="password" type="password" v-model="passwordValue" />
+    <span v-if="score === 0">Use better password</span>
+
+    <password-meter :password="passwordValue" @score="onScore" />
+  </form>
+</template>
+
+<script>
+import passwordMeter from "vue-simple-password-meter";
+
+export default {
+  components: { passwordMeter },
+  data: () => ({
+    passwordValue: null,
+    score: null
+  }),
+  methods: {
+    onScore({ score, strength }) {
+      console.log(score); // from 0 to 4
+      console.log(strength); // from 'risky' to 'guessable'
+      this.score = score;
+    }
+  }
+};
+</script>
+```
+
 ## Contributing
 
 If you want to contribute to this project simply fork it and clone it then run
-`npm i` 
+`npm i`
 in the root of the project, then run
 `npm run serve`
 to run development server.
-
 
 ## Motivation
 
