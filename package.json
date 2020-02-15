@@ -1,31 +1,18 @@
 {
   "name": "vue-simple-password-meter",
   "version": "0.0.16",
+  "private": false,
   "description": "A really simple password strength meter. customizable with css",
   "author": {
     "name": "Milad Dehghan",
     "email": "miladd3@gmail.com",
     "url": "https://github.com/miladd3"
   },
-  "repository": {
-    "url": "https://github.com/miladd3/vue-simple-password-meter"
-  },
-  "bugs": {
-    "url": "https://github.com/miladd3/vue-simple-password-meter/issues",
-    "email": "miladd3@gmail.com"
-  },
-  "keywords": [
-    "vue",
-    "password",
-    "meter",
-    "simple",
-    "strength"
-  ],
-  "license": "MIT",
-  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "test:unit": "vue-cli-service test:unit",
+    "test:watch": "vue-cli-service test:unit --watch",
     "lint": "vue-cli-service lint",
     "build:npm": "vue-cli-service build --target lib --name passwordMeter src/password-meter.vue"
   },
@@ -37,13 +24,17 @@
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.1.0",
     "@vue/cli-plugin-eslint": "^4.1.0",
+    "@vue/cli-plugin-unit-jest": "^4.2.2",
     "@vue/cli-service": "^4.1.0",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "@vue/test-utils": "1.0.0-beta.31",
     "babel-eslint": "^10.0.3",
-    "eslint": "^5.16.0",
-    "eslint-plugin-vue": "^5.0.0",
-    "vue-template-compiler": "^2.6.10",
     "core-js": "^3.4.4",
-    "vue": "^2.6.10"
+    "eslint": "^5.16.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-vue": "^5.0.0",
+    "vue": "^2.6.10",
+    "vue-template-compiler": "^2.6.10"
   },
   "eslintConfig": {
     "root": true,
@@ -57,10 +48,36 @@
     "rules": {},
     "parserOptions": {
       "parser": "babel-eslint"
-    }
+    },
+    "overrides": [
+      {
+        "files": [
+          "**/__tests__/*.{j,t}s?(x)",
+          "**/tests/unit/**/*.spec.{j,t}s?(x)"
+        ],
+        "env": {
+          "jest": true
+        }
+      }
+    ]
   },
   "browserslist": [
     "> 1%",
     "last 2 versions"
-  ]
+  ],
+  "bugs": {
+    "url": "https://github.com/miladd3/vue-simple-password-meter/issues",
+    "email": "miladd3@gmail.com"
+  },
+  "keywords": [
+    "vue",
+    "password",
+    "meter",
+    "simple",
+    "strength"
+  ],
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/miladd3/vue-simple-password-meter"
+  }
 }

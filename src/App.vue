@@ -10,7 +10,7 @@
       <form>
         <label for="password">Password</label>
         <input id="password" type="password" v-model="value" />
-        <password-meter :password="value" />
+        <password-meter :password="value" @score="onScore" />
       </form>
     </div>
   </div>
@@ -28,6 +28,12 @@ export default {
     return {
       value: null
     };
+  },
+  methods: {
+    onScore({ score, strength }) {
+      // eslint-disable-next-line no-console
+      console.log(score, strength);
+    }
   }
 };
 </script>
