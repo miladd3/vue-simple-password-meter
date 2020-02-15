@@ -1,6 +1,6 @@
 {
   "name": "vue-simple-password-meter",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "A really simple password strength meter. customizable with css",
   "author": {
     "name": "Milad Dehghan",
