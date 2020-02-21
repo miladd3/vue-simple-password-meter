@@ -3,28 +3,28 @@
 </template>
 
 <script>
-import { checkStrength, scorePassword } from "./logic";
+import { checkStrength, scorePassword } from './logic'
 
 export default {
-  name: "password-meter",
+  name: 'password-meter',
   props: {
     password: String
   },
   computed: {
-    passwordClass() {
+    passwordClass () {
       if (!this.password) {
-        return null;
+        return null
       }
-      const strength = checkStrength(this.password);
-      const score = scorePassword(this.password);
-      this.$emit("score", { score, strength });
+      const strength = checkStrength(this.password)
+      const score = scorePassword(this.password)
+      this.$emit('score', { score, strength })
       return {
         [strength]: true,
         scored: true
-      };
+      }
     }
   }
-};
+}
 </script>
 
 <style>

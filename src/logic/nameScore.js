@@ -1,18 +1,18 @@
 const nameScore = score => {
   switch (score) {
     case 0:
-      return "risky";
+      return 'risky'
     case 1:
-      return "guessable";
+      return 'guessable'
     case 2:
-      return "weak";
+      return 'weak'
     case 3:
-      return "safe";
+      return 'safe'
     case 4:
-      return "secure";
+      return 'secure'
     default:
-      return null;
+      return null
   }
-};
+}
 
-export default nameScore;
+export default nameScore

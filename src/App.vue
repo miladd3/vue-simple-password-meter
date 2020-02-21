@@ -18,28 +18,28 @@
 </template>
 
 <script>
-import passwordMeter from "./password-meter.vue";
+import passwordMeter from './password-meter.vue'
 
 export default {
-  name: "app",
+  name: 'app',
   components: {
     passwordMeter
   },
-  data() {
+  data () {
     return {
       value: null,
       score: null
-    };
+    }
   },
   methods: {
-    onScore({ score, strength }) {
+    onScore ({ score, strength }) {
       // eslint-disable-next-line no-console
-      console.log(score, strength);
+      console.log(score, strength)
 
-      this.score = score;
+      this.score = score
     }
   }
-};
+}
 </script>
 
 <style>
