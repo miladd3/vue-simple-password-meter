@@ -1,6 +1,6 @@
 # vue-simple-password-meter
 
-**Vue Simple Passwod Meter** is a simple password checker written in vanilla js and extremly lightweight (**3.1kb minified + Gzipped**)
+**Vue Simple Passwod Meter** is a simple password checker written in vanilla js and extremly lightweight (**3.2kb minified + Gzipped**)
 
 ## Demo
 
@@ -74,7 +74,7 @@ Overwrite these css styles globally and change each state color and style
 
 You can use event `score` to use scored number between `0` to `4` that scores password from risky to secure with 4 is a secure password and 0 is risky and between.
 
-You can use this as a form verification
+You can use this as a form verification tool
 
 See below example for more detail
 
@@ -101,7 +101,7 @@ export default {
   methods: {
     onScore({ score, strength }) {
       console.log(score); // from 0 to 4
-      console.log(strength); // from 'risky' to 'guessable'
+      console.log(strength); // one of : 'risky', 'guessable', 'weak', 'safe' or 'secure' 
       this.score = score;
     }
   }
