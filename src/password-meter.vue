@@ -11,7 +11,7 @@ export default {
     password: String
   },
   computed: {
-    passwordClass () {
+    passwordClass() {
       if (!this.password) {
         return null
       }
