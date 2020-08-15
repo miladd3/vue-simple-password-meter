@@ -39,7 +39,7 @@ input.hero-main-input {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   text-align: center;
-  border: none;
+  border: 2px solid #ffffff;
   border-radius: 2px;
   background-color: #ffffff;
 }

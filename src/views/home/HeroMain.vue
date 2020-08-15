@@ -1,20 +1,29 @@
 <template>
   <div class="hero-main">
-    <img :src="image" alt="" ref="theImage" />
+    <img class="main-image" :src="image" alt="" ref="theImage" />
 
     <div class="content-box">
       <div class="logo">
         <img :src="logo" alt="vue simple password meter" />
       </div>
 
-      <hero-main-input v-model="password" />
+      <h1 class="main-title">Vue Simple Password Meter</h1>
+      <hero-main-input
+        v-model="password"
+        placeholder="Type a Strong Password"
+      />
       <password-meter :password="password" @score="onScore" />
+    </div>
+
+    <div class="learn-more">
+      <img :src="mouseDown" />
     </div>
   </div>
 </template>
 
 <script>
 import heroImage from '@/assets/hero-image.jpg'
+import mouseDown from '@/assets/mouse-down.svg'
 import logoWhite from '@/assets/logo-w.svg'
 import HeroMainInput from './HeroMainInput'
 import passwordMeter from 'vue-simple-password-meter'
@@ -36,6 +45,7 @@ export default {
     return {
       image: heroImage,
       logo: logoWhite,
+      mouseDown,
       password: null,
       pixelate: null
     }
@@ -59,6 +69,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@use '@/styles/_mq.scss' as *;
+
 .hero-main {
   height: calc(100vh - 60px);
   overflow: hidden;
@@ -67,15 +79,23 @@ export default {
   align-items: center;
   position: relative;
 
-  img {
+  > .main-image {
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    @include mq(desktop) {
+      height: auto;
+      object-fit: contain;
+    }
   }
 
   &:after {
     content: '';
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.5);
     position: absolute;
     left: 0;
     right: 0;
@@ -90,6 +110,22 @@ export default {
     color: #ffffff;
     max-width: 450px;
     width: 100%;
+    text-align: center;
+
+    > .logo {
+      display: block;
+    }
+
+    > .main-title {
+      font-size: 2rem;
+      margin: 1rem 0 2rem 0;
+    }
+  }
+
+  .learn-more {
+    position: absolute;
+    z-index: 20;
+    bottom: 20px;
   }
 }
 </style>
