@@ -1,10 +1,14 @@
 <template>
-  <div></div>
+  <div class="page-home">
+    <hero-main />
+  </div>
 </template>
 
 <script>
+import HeroMain from './HeroMain'
 export default {
-  name: 'HomePage'
+  name: 'HomePage',
+  components: { HeroMain }
 }
 </script>
 
