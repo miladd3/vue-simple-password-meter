@@ -1,5 +1,5 @@
 {
-  "name": "vue-simple-password-meter",
+  "name": "vue-simple-password-meter-demo-src",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,7 +9,9 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "vue": "^2.6.11"
+    "pixelate": "0.0.5",
+    "vue": "^2.6.11",
+    "vue-simple-password-meter": "0.0.22"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.4.0",
