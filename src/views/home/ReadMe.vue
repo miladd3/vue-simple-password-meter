@@ -1,5 +1,5 @@
 <template>
-  <div class="readme">
+  <div class="readme" id="readme">
     <div class="container">
       <vue-showdown
         :markdown="readme"

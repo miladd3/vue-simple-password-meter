@@ -15,9 +15,9 @@
       <password-meter :password="password" @score="onScore" />
     </div>
 
-    <div class="learn-more">
+    <a class="learn-more" href="#readme" v-smooth-scroll>
       <img :src="mouseDown" />
-    </div>
+    </a>
   </div>
 </template>
 
