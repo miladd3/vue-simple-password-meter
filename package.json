@@ -99,5 +99,8 @@
   "license": "MIT",
   "repository": {
     "url": "https://github.com/miladd3/vue-simple-password-meter"
+  },
+  "resolutions": {
+    "yargs-parser": "15.0.1"
   }
 }
