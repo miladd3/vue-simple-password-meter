@@ -1,6 +1,8 @@
 # vue-simple-password-meter
 
-**Vue Simple Passwod Meter** is a simple password checker written in vanilla js and extremly lightweight (**3.2kb minified + Gzipped**)
+**Vue Simple Password Meter** is a simple password checker written in vanilla js and extremely lightweight (**3.2kb minified + Gzipped**)
+
+#### This is Vue 3.* compatible version. If you are using Vue 2.* [Click Here](https://github.com/miladd3/vue-simple-password-meter#readme)
 
 ## Demo
 
@@ -8,7 +10,7 @@
 
 ## Install
 
-`npm install vue-simple-password-meter --save`
+`npm install vue-simple-password-meter@next --save`
 
 ## Usage
 
@@ -16,28 +18,35 @@ Simply use v-model and send it to the component using password prop
 
 ```vue
 <template>
-  <form>
-    <label for="password">Password</label>
-    <input id="password" type="password" v-model="passwordValue" />
-    <password-meter :password="passwordValue" />
-  </form>
+  <div id="app">
+    <label>Password</label>
+    <input type="password" v-model="password" />
+    <password-meter :password="password" />
+  </div>
 </template>
 
 <script>
-import PasswordMeter from "vue-simple-password-meter";
+import { defineComponent, ref } from 'vue';
+import PasswordMeter from 'vue-simple-password-meter';
 
-export default {
-  components: { PasswordMeter },
-  data: () => ({
-    passwordValue: null
-  })
-};
+export default defineComponent({
+  components: {
+    PasswordMeter,
+  },
+  setup() {
+    const password = ref('');
+
+    return {
+      password,
+    };
+  },
+});
 </script>
 ```
 
 ### Customize using css
 
-If you wanna customize the bar its really simple with some easy css you can customize it
+If you want to customize the bar its really simple with some easy css you can customize it
 
 Overwrite these css styles globally and change each state color and style
 
@@ -80,32 +89,40 @@ See below example for more detail
 
 ```vue
 <template>
-  <form>
-    <label for="password">Password</label>
-    <input id="password" type="password" v-model="passwordValue" />
+  <div id="app">
+    <label>Password</label>
+    <input type="password" v-model="password" />
     <span v-if="score === 0">Use better password</span>
-
-    <password-meter :password="passwordValue" @score="onScore" />
-  </form>
+    <password-meter @score="onScore" :password="password" />
+  </div>
 </template>
 
 <script>
+import { defineComponent, ref } from "vue";
 import PasswordMeter from "vue-simple-password-meter";
 
-export default {
-  components: { PasswordMeter },
-  data: () => ({
-    passwordValue: null,
-    score: null
-  }),
-  methods: {
-    onScore({ score, strength }) {
-      console.log(score); // from 0 to 4
-      console.log(strength); // one of : 'risky', 'guessable', 'weak', 'safe' , 'secure' 
-      this.score = score;
-    }
-  }
-};
+export default defineComponent({
+  name: "App",
+  components: {
+    PasswordMeter,
+  },
+  setup() {
+    const password = ref("");
+    const score = ref(null);
+
+    const onScore = (payload) => {
+      console.log(payload.score); // from 0 to 4
+      console.log(payload.strength); // one of : 'risky', 'guessable', 'weak', 'safe' , 'secure'
+      score.value = payload.score;
+    };
+
+    return {
+      password,
+      onScore,
+      score,
+    };
+  },
+});
 </script>
 ```
 
@@ -119,10 +136,10 @@ to run development server.
 
 ## Motivation
 
-Since Every other components and libraries mostly were using [zxcvbn](https://github.com/dropbox/zxcvbn) was 799.5kb minified and 388.3kb minified and Gzipped so i decided to make simpler approach and use regex instead of dictionary for validating.
+Since Every other components and libraries mostly were using [zxcvbn](https://github.com/dropbox/zxcvbn) was 799.5kb minified and 388.3kb minified and Gzipped, so I decided to make simpler approach and use regex instead of dictionary for validating.
 
 ### Licence and cast
 
 MIT Licence
 
-by [Milad Dehghan](https://dehghan.net)
+by [Milad Dehghan](http://dehghan.net)
