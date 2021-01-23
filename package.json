@@ -13,24 +13,28 @@
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
-    "build:npm": "vue-cli-service build --target lib --name passwordMeter src/password-meter.vue",
+    "build:npm": "vue-cli-service build --target lib --name PasswordMeter src/build/build.ts",
+    "build:local": "vue-cli-service build --target lib --name PasswordMeter src/build/build.ts  && npm pack",
     "test:watch": "vue-cli-service test:unit --watch"
   },
-  "main": "dist/passwordMeter.umd.js",
-  "unpkg": "dist/passwordMeter.umd.min.js",
+  "main": "dist/PasswordMeter.umd.js",
+  "unpkg": "dist/PasswordMeter.umd.min.js",
+  "typings": "src/types/index.d.ts",
+  "types": "src/types/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "src/types"
   ],
   "dependencies": {},
   "devDependencies": {
     "@types/jest": "^24.0.19",
     "@typescript-eslint/eslint-plugin": "^2.33.0",
     "@typescript-eslint/parser": "^2.33.0",
-    "@vue/cli-plugin-babel": "^4.1.0",
-    "@vue/cli-plugin-eslint": "^4.2.2",
+    "@vue/cli-plugin-babel": "^4.5.11",
+    "@vue/cli-plugin-eslint": "^4.5.11",
     "@vue/cli-plugin-typescript": "^4.5.11",
-    "@vue/cli-plugin-unit-jest": "^4.2.2",
-    "@vue/cli-service": "^4.2.3",
+    "@vue/cli-plugin-unit-jest": "^4.5.11",
+    "@vue/cli-service": "^4.5.11",
     "@vue/compiler-sfc": "^3.0.5",
     "@vue/eslint-config-prettier": "^6.0.0",
     "@vue/eslint-config-standard": "^5.1.0",
@@ -48,7 +52,7 @@
     "jest": "^24.9.0",
     "typescript": "~3.9.3",
     "vue": "^3.0.0-beta.1",
-    "vue-cli-plugin-vue-next": "~0.1.4"
+    "vue-jest": "^5.0.0-0"
   },
   "eslintConfig": {
     "root": true,
@@ -69,6 +73,15 @@
       "parser": "@typescript-eslint/parser"
     },
     "overrides": [
+      {
+        "files": [
+          "**/__tests__/*.{j,t}s?(x)",
+          "**/tests/unit/**/*.spec.{j,t}s?(x)"
+        ],
+        "env": {
+          "jest": true
+        }
+      },
       {
         "files": [
           "**/__tests__/*.{j,t}s?(x)",
