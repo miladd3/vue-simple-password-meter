@@ -24,10 +24,10 @@ Simply use v-model and send it to the component using password prop
 </template>
 
 <script>
-import passwordMeter from "vue-simple-password-meter";
+import PasswordMeter from "vue-simple-password-meter";
 
 export default {
-  components: { passwordMeter },
+  components: { PasswordMeter },
   data: () => ({
     passwordValue: null
   })
@@ -90,10 +90,10 @@ See below example for more detail
 </template>
 
 <script>
-import passwordMeter from "vue-simple-password-meter";
+import PasswordMeter from "vue-simple-password-meter";
 
 export default {
-  components: { passwordMeter },
+  components: { PasswordMeter },
   data: () => ({
     passwordValue: null,
     score: null

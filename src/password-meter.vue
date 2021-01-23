@@ -7,7 +7,7 @@ import {defineComponent} from 'vue'
 import { checkStrength, scorePassword } from './logic'
 
 export default  defineComponent({
-  name: 'password-meter',
+  name: 'PasswordMeter',
   props: {
     password: String
   },

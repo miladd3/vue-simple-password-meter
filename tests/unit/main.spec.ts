@@ -1,5 +1,5 @@
 import { shallowMount } from '@vue/test-utils'
-import passwordMeter from '@/password-meter.vue'
+import PasswordMeter from '@/password-meter.vue'
 import { risky, guessable, weak, safe, secure } from '../password-examples'
 
 describe('password-meter.vue', () => {
@@ -7,8 +7,8 @@ describe('password-meter.vue', () => {
    * Test risky
    */
   it('renders and detects: risky', () => {
-    const wrapper = shallowMount(passwordMeter, {
-      propsData: {
+    const wrapper = shallowMount(PasswordMeter, {
+      props: {
         password: risky
       }
     })
@@ -20,8 +20,8 @@ describe('password-meter.vue', () => {
    * Test guessable
    */
   it('renders and detects : guessable', () => {
-    const wrapper = shallowMount(passwordMeter, {
-      propsData: {
+    const wrapper = shallowMount(PasswordMeter, {
+      props: {
         password: guessable
       }
     })
@@ -33,8 +33,8 @@ describe('password-meter.vue', () => {
    * Test weak
    */
   it('renders and detects : weak', () => {
-    const wrapper = shallowMount(passwordMeter, {
-      propsData: {
+    const wrapper = shallowMount(PasswordMeter, {
+      props: {
         password: weak
       }
     })
@@ -46,8 +46,8 @@ describe('password-meter.vue', () => {
    * Test safe
    */
   it('renders and detects : safe', () => {
-    const wrapper = shallowMount(passwordMeter, {
-      propsData: {
+    const wrapper = shallowMount(PasswordMeter, {
+      props: {
         password: safe
       }
     })
@@ -59,8 +59,8 @@ describe('password-meter.vue', () => {
    * Test secure
    */
   it('renders and detects : secure', () => {
-    const wrapper = shallowMount(passwordMeter, {
-      propsData: {
+    const wrapper = shallowMount(PasswordMeter, {
+      props: {
         password: secure
       }
     })
