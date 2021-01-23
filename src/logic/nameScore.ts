@@ -1,4 +1,4 @@
-const nameScore = score => {
+const nameScore = (score: number): string  => {
   switch (score) {
     case 0:
       return 'risky'
@@ -11,7 +11,7 @@ const nameScore = score => {
     case 4:
       return 'secure'
     default:
-      return null
+      return ''
   }
 }
 

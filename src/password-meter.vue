@@ -2,16 +2,17 @@
   <div class="po-password-strength-bar" :class="passwordClass"></div>
 </template>
 
-<script>
+<script lang="ts">
+import {defineComponent} from 'vue'
 import { checkStrength, scorePassword } from './logic'
 
-export default {
+export default  defineComponent({
   name: 'password-meter',
   props: {
     password: String
   },
   computed: {
-    passwordClass() {
+    passwordClass(): object | null {
       if (!this.password) {
         return null
       }
@@ -24,7 +25,7 @@ export default {
       }
     }
   }
-}
+})
 </script>
 
 <style>
