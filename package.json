@@ -1,6 +1,6 @@
 {
   "name": "vue-simple-password-meter",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "private": false,
   "description": "A really simple password strength meter. customizable with css",
   "author": {
@@ -25,7 +25,6 @@
     "dist",
     "src/types"
   ],
-  "dependencies": {},
   "devDependencies": {
     "@types/jest": "^24.0.19",
     "@typescript-eslint/eslint-plugin": "^2.33.0",
