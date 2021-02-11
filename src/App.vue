@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <input type="password" v-model="pass">
-    <password-meter :password="pass" />
+    <password-meter :password="pass" @score="onScore" />
   </div>
 </template>
 
@@ -16,6 +16,11 @@ export default defineComponent({
   data() {
     return {
       pass: ''
+    }
+  },
+  methods: {
+    onScore(score: { score: number, strength: string }) {
+      console.log(score)
     }
   }
 });

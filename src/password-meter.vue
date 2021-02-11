@@ -11,6 +11,7 @@ export default defineComponent({
   props: {
     password: String
   },
+  emits: ['score'],
   computed: {
     passwordClass(): object | null {
       if (!this.password) {
