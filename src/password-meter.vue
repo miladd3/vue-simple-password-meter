@@ -30,6 +30,7 @@ export default defineComponent({
 </script>
 
 <style>
+
 .po-password-strength-bar {
   border-radius: 2px;
   transition: all 0.2s linear;
@@ -39,21 +40,26 @@ export default defineComponent({
 
 .po-password-strength-bar.risky {
   background-color: #f95e68;
+  width: 10%;
 }
 
 .po-password-strength-bar.guessable {
   background-color: #fb964d;
+  width: 32.5%;
 }
 
 .po-password-strength-bar.weak {
   background-color: #fdd244;
+  width: 55%;
 }
 
 .po-password-strength-bar.safe {
   background-color: #b0dc53;
+  width: 77.5%;
 }
 
 .po-password-strength-bar.secure {
   background-color: #35cc62;
+  width: 100%;
 }
 </style>
