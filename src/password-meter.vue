@@ -8,7 +8,7 @@ import { checkStrength, scorePassword } from './logic'
 export default {
   name: 'password-meter',
   props: {
-    password: String
+    password: String,
   },
   computed: {
     passwordClass() {
@@ -37,21 +37,26 @@ export default {
 
 .po-password-strength-bar.risky {
   background-color: #f95e68;
+  width: 10%;
 }
 
 .po-password-strength-bar.guessable {
   background-color: #fb964d;
+  width: 32.5%;
 }
 
 .po-password-strength-bar.weak {
   background-color: #fdd244;
+  width: 55%;
 }
 
 .po-password-strength-bar.safe {
   background-color: #b0dc53;
+  width: 77.5%;
 }
 
 .po-password-strength-bar.secure {
   background-color: #35cc62;
+  width: 100%;
 }
 </style>
