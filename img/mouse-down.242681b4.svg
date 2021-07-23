@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26.382" height="58.804" viewBox="0 0 26.382 58.804">
+  <g id="Group_8" data-name="Group 8" transform="translate(-670 -613)">
+    <g id="mouse" transform="translate(594.274 613)">
+      <g id="Group_4" data-name="Group 4" transform="translate(75.726)">
+        <g id="Group_3" data-name="Group 3">
+          <path id="Path_17" data-name="Path 17" d="M88.917,0A13.311,13.311,0,0,0,75.726,13.4V24.067a13.192,13.192,0,1,0,26.382.041V13.4A13.311,13.311,0,0,0,88.917,0Zm10.71,24.108a10.712,10.712,0,1,1-21.42-.041V13.4a10.712,10.712,0,1,1,21.42,0Z" transform="translate(-75.726 0)" fill="#fff"/>
+        </g>
+      </g>
+      <g id="Group_6" data-name="Group 6" transform="translate(87.677 10.255)">
+        <g id="Group_5" data-name="Group 5">
+          <path id="Path_18" data-name="Path 18" d="M240.287,140.15a1.241,1.241,0,0,0-1.241,1.241v4.342a1.241,1.241,0,1,0,2.481,0v-4.342A1.241,1.241,0,0,0,240.287,140.15Z" transform="translate(-239.046 -140.15)" fill="#fff"/>
+        </g>
+      </g>
+    </g>
+    <path id="Icon_weather-direction-down" data-name="Icon weather-direction-down" d="M14.124,19.764a.836.836,0,0,0,.3.66l2.88,2.94a.931.931,0,0,0,.7.276.988.988,0,0,0,.708-.276l2.88-2.94a.846.846,0,0,0,.288-.66.972.972,0,0,0-.276-.684.879.879,0,0,0-.672-.276.951.951,0,0,0-.684.276l-1.272,1.26V12.432a.89.89,0,0,0-.288-.672,1.034,1.034,0,0,0-1.38,0,.89.89,0,0,0-.288.672V20.34l-1.272-1.26a.889.889,0,0,0-.66-.276.943.943,0,0,0-.96.96Z" transform="translate(664.876 648.164)" fill="#fff"/>
+  </g>
+</svg>
