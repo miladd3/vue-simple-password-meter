@@ -3,8 +3,8 @@
     <div class="wrap">
       <h1>Vue Simple Password Meter</h1>
       <p>
-        <b>Vue Simple Passwod Meter</b> is a simple password checker written in
-        vanilla js and extremly lightweight
+        <b>Vue Simple Password Meter</b> is a simple password checker written in
+        vanilla js and extremely lightweight
       </p>
 
       <form>

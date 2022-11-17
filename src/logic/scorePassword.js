@@ -1,4 +1,6 @@
-const scorePassword = pass => {
+const defaultLengthConfig ={ lvl1: 4, lvl2: 8, lvl3: 12, lvl4: 25}
+
+const scorePassword = (pass, lengthConfig = defaultLengthConfig) => {
   let score = 0
   let length = 0
   let specialChar = 0
@@ -17,7 +19,7 @@ const scorePassword = pass => {
   const hasNumber = numberRegex.test(pass)
   const hasRepeatChars = repeatCharRegex.test(pass)
 
-  if (pass.length > 4) {
+  if (pass.length > lengthConfig.lvl1) {
     if ((hasLowerCase || hasUpperCase) && hasNumber) {
       numCharMix = 1
     }
@@ -30,15 +32,15 @@ const scorePassword = pass => {
       specialChar = 1
     }
 
-    if (pass.length > 8) {
+    if (pass.length > lengthConfig.lvl2) {
       length = 1
     }
 
-    if (pass.length > 12 && !hasRepeatChars) {
+    if (pass.length > lengthConfig.lvl3 && !hasRepeatChars) {
       length = 2
     }
 
-    if (pass.length > 25 && !hasRepeatChars) {
+    if (pass.length > lengthConfig.lvl4 && !hasRepeatChars) {
       length = 3
     }
 

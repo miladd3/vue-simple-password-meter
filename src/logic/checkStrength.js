@@ -1,8 +1,8 @@
 import scorePassword from './scorePassword'
 import nameScore from './nameScore'
 
-const checkStrength = pass => {
-  const score = scorePassword(pass)
+const checkStrength = (pass, lengthConfig) => {
+  const score = scorePassword(pass, lengthConfig)
   return nameScore(score)
 }
 

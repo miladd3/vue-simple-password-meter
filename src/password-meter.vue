@@ -9,18 +9,26 @@ export default {
   name: 'password-meter',
   props: {
     password: String,
+    lengthConfig: {
+      type: [Object, undefined],
+      default: undefined,
+      validator(value) {
+        if (undefined) return true
+        return ['lvl1', 'lvl2', 'lvl3', 'lvl4'].every((i) => Object.prototype.hasOwnProperty.call(value, i))
+      }
+    }
   },
   computed: {
     passwordClass() {
       if (!this.password) {
         return null
       }
-      const strength = checkStrength(this.password)
-      const score = scorePassword(this.password)
+      const strength = checkStrength(this.password, this.lengthConfig)
+      const score = scorePassword(this.password, this.lengthConfig)
       this.$emit('score', { score, strength })
       return {
         [strength]: true,
-        scored: true
+        scored: true,
       }
     }
   }

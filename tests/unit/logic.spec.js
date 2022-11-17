@@ -21,6 +21,10 @@ describe('checkStrength', () => {
   it('return secure', () => {
     expect(checkStrength(secure)).toBe('secure')
   })
+
+  it('custom length config', () => {
+    expect(checkStrength(secure, {lvl1: 8, lvl2: 10, lvl3: 12, lvl4: 15})).toBe('safe')
+  })
 })
 
 describe('scorePassword', () => {
@@ -42,5 +46,9 @@ describe('scorePassword', () => {
 
   it('return secure = 4', () => {
     expect(scorePassword(secure)).toBe(4)
+  })
+
+  it('custom length config', () => {
+    expect(scorePassword(secure, {lvl1: 8, lvl2: 10, lvl3: 12, lvl4: 15})).toBe(3)
   })
 })
