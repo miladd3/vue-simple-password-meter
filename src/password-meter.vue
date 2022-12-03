@@ -3,10 +3,9 @@
 </template>
 
 <script lang="ts">
-import {defineComponent} from 'vue'
 import { checkStrength, scorePassword } from './logic'
 
-export default defineComponent({
+export default {
   name: 'PasswordMeter',
   props: {
     password: String
@@ -26,7 +25,7 @@ export default defineComponent({
       }
     }
   }
-})
+}
 </script>
 
 <style>
