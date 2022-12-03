@@ -29,12 +29,7 @@
     "@types/jest": "^24.0.19",
     "@typescript-eslint/eslint-plugin": "^2.33.0",
     "@typescript-eslint/parser": "^2.33.0",
-    "@vue/cli-plugin-babel": "^4.5.11",
-    "@vue/cli-plugin-eslint": "^4.5.11",
-    "@vue/cli-plugin-typescript": "^4.5.11",
-    "@vue/cli-plugin-unit-jest": "^4.5.11",
-    "@vue/cli-service": "^4.5.11",
-    "@vue/compiler-sfc": "^3.0.5",
+    "@vitejs/plugin-vue": "^3.2.0",
     "@vue/eslint-config-prettier": "^6.0.0",
     "@vue/eslint-config-standard": "^5.1.0",
     "@vue/eslint-config-typescript": "^5.0.2",
@@ -50,7 +45,8 @@
     "eslint-plugin-vue": "^7.0.0-alpha.0",
     "jest": "^24.9.0",
     "typescript": "~3.9.3",
-    "vue": "^3.0.0-beta.1",
+    "vite": "^3.2.4",
+    "vue": "^3.2",
     "vue-jest": "^5.0.0-0"
   },
   "eslintConfig": {
@@ -123,5 +119,8 @@
   },
   "resolutions": {
     "yargs-parser": "15.0.1"
+  },
+  "dependencies": {
+    "clean": "^4.0.2"
   }
 }
