@@ -9,13 +9,9 @@
     "url": "https://github.com/miladd3"
   },
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint",
-    "build:npm": "vue-cli-service build --target lib --name PasswordMeter src/build/build.ts",
-    "build:local": "vue-cli-service build --target lib --name PasswordMeter src/build/build.ts  && npm pack",
-    "test:watch": "vue-cli-service test:unit --watch"
+    "serve": "vite serve",
+    "build": "vite build",
+    "build:npm": "vite build",
   },
   "main": "dist/vue-simple-password-meter.umd.js",
   "unpkg": "dist/vue-simple-password-meter.umd.js",
