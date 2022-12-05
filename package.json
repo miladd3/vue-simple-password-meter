@@ -11,7 +11,7 @@
   "scripts": {
     "serve": "vite serve",
     "build": "vite build",
-    "build:npm": "vite build",
+    "build:npm": "vite build"
   },
   "main": "dist/vue-simple-password-meter.umd.js",
   "unpkg": "dist/vue-simple-password-meter.umd.js",
