@@ -1,6 +1,6 @@
 {
   "name": "vue-simple-password-meter",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": false,
   "description": "A really simple password strength meter. customizable with css",
   "author": {
