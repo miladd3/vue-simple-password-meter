@@ -1,7 +1,3 @@
-<template>
-  <div class="po-password-strength-bar" :class="passwordClass"></div>
-</template>
-
 <script lang="ts">
 import { checkStrength, scorePassword } from './logic'
 
@@ -26,7 +22,12 @@ export default {
     }
   }
 }
+
 </script>
+
+<template>
+  <div class="po-password-strength-bar" :class="passwordClass" />
+</template>
 
 <style>
 

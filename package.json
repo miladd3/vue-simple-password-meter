@@ -17,8 +17,8 @@
     "build:local": "vue-cli-service build --target lib --name PasswordMeter src/build/build.ts  && npm pack",
     "test:watch": "vue-cli-service test:unit --watch"
   },
-  "main": "dist/PasswordMeter.umd.js",
-  "unpkg": "dist/PasswordMeter.umd.min.js",
+  "main": "dist/vue-simple-password-meter.umd.js",
+  "unpkg": "dist/vue-simple-password-meter.umd.js",
   "typings": "src/types/index.d.ts",
   "types": "src/types/index.d.ts",
   "files": [
@@ -34,6 +34,7 @@
     "jest": "^24.9.0",
     "typescript": "~3.9.3",
     "vite": "^3.2.4",
+    "vite-plugin-css-injected-by-js": "^2.1.1",
     "vue": "^3.2",
     "vue-jest": "^5.0.0-0"
   },
