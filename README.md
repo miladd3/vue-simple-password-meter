@@ -1,6 +1,6 @@
 # vue-simple-password-meter
 
-**Vue Simple Password Meter** is a simple password checker written in vanilla js and extremely lightweight (**3.2kb minified + Gzipped**)
+**Vue Simple Password Meter** is a simple password checker written in vanilla js and extremely lightweight (** less than 1kb minified + Gzipped**)
 
 #### This is `Vue 3.*` compatible version. If you are using `Vue 2.*` [Click Here](https://github.com/miladd3/vue-simple-password-meter/tree/vue-2)
 
