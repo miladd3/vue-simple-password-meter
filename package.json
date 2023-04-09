@@ -22,12 +22,12 @@
     "src/types"
   ],
   "devDependencies": {
-    "@types/jest": "^24.0.19",
+    "@types/jest": "^29.5.0",
     "@typescript-eslint/eslint-plugin": "^2.33.0",
     "@typescript-eslint/parser": "^2.33.0",
     "@vitejs/plugin-vue": "^3.2.0",
-    "@vue/test-utils": "^2.0.0-alpha.1",
-    "jest": "^29.4.3",
+    "@vue/test-utils": "2.3.2",
+    "jest": "^24.5.1",
     "typescript": "~3.9.3",
     "vite": "^3.2.4",
     "vite-plugin-css-injected-by-js": "^2.1.1",
