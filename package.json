@@ -10,8 +10,11 @@
   },
   "scripts": {
     "serve": "vite serve",
-    "build": "rimraf ./dist && vite build",
-    "build:npm": "rimraf ./dist && vite build"
+    "clean": "rimraf ./dist",
+    "build": "npm run clean && vite build",
+    "build:npm": "npm run clean  && vite build",
+    "gitvue2": "git checkout vue-2 && git pull && npm clean-install",
+    "publish": "npm run build:npm && npm publish"
   },
   "main": "dist/vue-simple-password-meter.umd.js",
   "unpkg": "dist/vue-simple-password-meter.umd.js",
