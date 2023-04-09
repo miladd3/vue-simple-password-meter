@@ -1,5 +1,6 @@
 import { checkStrength, scorePassword } from '@/logic'
 import { risky, guessable, weak, safe, secure } from '../password-examples'
+import {describe, it, expect} from 'vitest'
 
 describe('checkStrength', () => {
   it('return risky', () => {

@@ -10,8 +10,8 @@
   },
   "scripts": {
     "serve": "vite serve",
-    "build": "vite build",
-    "build:npm": "vite build"
+    "build": "rimraf ./dist && vite build",
+    "build:npm": "rimraf ./dist && vite build"
   },
   "main": "dist/vue-simple-password-meter.umd.js",
   "unpkg": "dist/vue-simple-password-meter.umd.js",
@@ -22,15 +22,15 @@
     "src/types"
   ],
   "devDependencies": {
-    "@types/jest": "^29.5.0",
     "@typescript-eslint/eslint-plugin": "^2.33.0",
     "@typescript-eslint/parser": "^2.33.0",
     "@vitejs/plugin-vue": "^3.2.0",
-    "@vue/test-utils": "2.3.2",
-    "jest": "^24.5.1",
-    "typescript": "~3.9.3",
+    "@vue/test-utils": "^2.3.2",
+    "rimraf": "^4.4.1",
+    "typescript": "^5.0.4",
     "vite": "^3.2.4",
     "vite-plugin-css-injected-by-js": "^2.1.1",
+    "vitest": "^0.30.0",
     "vue": "^3.2",
     "vue-jest": "^5.0.0-0"
   },

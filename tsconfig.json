@@ -5,6 +5,12 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "isolatedModules": true,
-    "noEmit": true
-  }
+    "skipLibCheck": true,
+    "noEmit": true,
+    "paths": {
+      "@/*": ["./src/*"],
+    }
+  },
+  "include": ["src/**/*.ts", "tests/**/*.ts"],
+  "exclude": ["node_modules", ".vscode"]
 }
