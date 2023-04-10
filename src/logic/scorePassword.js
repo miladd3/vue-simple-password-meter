@@ -1,3 +1,5 @@
+import { isCommonPassword } from '@/logic/isCommonPassword'
+
 const scorePassword = pass => {
   let score = 0
   let length = 0
@@ -18,6 +20,10 @@ const scorePassword = pass => {
   const hasRepeatChars = repeatCharRegex.test(pass)
 
   if (pass.length > 4) {
+    if (isCommonPassword(pass)) {
+      return 0
+    }
+
     if ((hasLowerCase || hasUpperCase) && hasNumber) {
       numCharMix = 1
     }
@@ -38,7 +44,7 @@ const scorePassword = pass => {
       length = 2
     }
 
-    if (pass.length > 25 && !hasRepeatChars) {
+    if (pass.length > 20 && !hasRepeatChars) {
       length = 3
     }
 

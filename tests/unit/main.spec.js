@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils'
 import passwordMeter from '@/password-meter.vue'
-import { risky, guessable, weak, safe, secure } from '../password-examples'
+import { risky, guessable, weak, safe, secure, common } from '../password-examples'
 
 describe('password-meter.vue', () => {
   /**
@@ -67,4 +67,18 @@ describe('password-meter.vue', () => {
 
     expect(wrapper.classes()).toContain('secure')
   })
+
+  /**
+   * Test common
+   */
+  it('renders and detects : common', () => {
+    const wrapper = shallowMount(passwordMeter, {
+      propsData: {
+        password: common
+      }
+    })
+
+    expect(wrapper.classes()).toContain('risky')
+  });
+
 })
