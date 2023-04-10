@@ -1,5 +1,5 @@
 import { checkStrength, scorePassword } from '@/logic'
-import { risky, guessable, weak, safe, secure } from '../password-examples'
+import { risky, guessable, weak, safe, secure, common } from '../password-examples'
 import {describe, it, expect} from 'vitest'
 
 describe('checkStrength', () => {
@@ -22,6 +22,15 @@ describe('checkStrength', () => {
   it('return secure', () => {
     expect(checkStrength(secure)).toBe('secure')
   })
+
+  it('return risky common', () => {
+    expect(checkStrength(common)).toBe('risky')
+  })
+
+  it('return risky empty', () => {
+    expect(checkStrength('')).toBe('risky')
+  });
+
 })
 
 describe('scorePassword', () => {
@@ -44,4 +53,12 @@ describe('scorePassword', () => {
   it('return secure = 4', () => {
     expect(scorePassword(secure)).toBe(4)
   })
+
+  it('return risky common = 0', () => {
+    expect(scorePassword(common)).toBe(0)
+  })
+
+  it('return risky empty = 0', () => {
+    expect(scorePassword('')).toBe(0)
+  });
 })

@@ -14,7 +14,8 @@
     "build": "npm run clean && vite build",
     "build:npm": "npm run clean  && vite build",
     "gitvue2": "git checkout vue-2 && git pull && npm clean-install",
-    "publish": "npm run build:npm && npm publish"
+    "publish": "npm run build:npm && npm publish",
+    "test": "vitest"
   },
   "main": "dist/vue-simple-password-meter.umd.js",
   "unpkg": "dist/vue-simple-password-meter.umd.js",
@@ -29,6 +30,7 @@
     "@typescript-eslint/parser": "^2.33.0",
     "@vitejs/plugin-vue": "^3.2.0",
     "@vue/test-utils": "^2.3.2",
+    "happy-dom": "^9.1.9",
     "rimraf": "^4.4.1",
     "typescript": "^5.0.4",
     "vite": "^3.2.4",
