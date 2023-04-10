@@ -14,7 +14,6 @@
     "build": "npm run clean && vite build",
     "build:npm": "npm run clean  && vite build",
     "gitvue2": "git checkout vue-2 && git pull && npm clean-install",
-    "publish": "npm run build:npm && npm publish",
     "test": "vitest"
   },
   "main": "dist/vue-simple-password-meter.umd.js",
