@@ -14,7 +14,8 @@
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "build:npm": "vue-cli-service build --target lib --name passwordMeter src/password-meter.vue",
-    "test:watch": "vue-cli-service test:unit --watch"
+    "test:watch": "vue-cli-service test:unit --watch",
+    "gitvue3": "git checkout master && git pull && npm clean-install && rimraf dist"
   },
   "main": "dist/passwordMeter.umd.js",
   "unpkg": "dist/passwordMeter.umd.min.js",
@@ -39,6 +40,7 @@
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^6.1.2",
     "jest": "^25.1.0",
+    "rimraf": "^4.4.1",
     "vue": "^2.6.10",
     "vue-template-compiler": "^2.6.10"
   },
