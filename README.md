@@ -84,6 +84,7 @@ Overwrite these css styles globally and change each state color and style
 }
 ```
 
+
 ## Events
 
 You can use event `score` to use scored number between `0` to `4` that scores password from risky to secure with 4 is a secure password and 0 is risky and between.
