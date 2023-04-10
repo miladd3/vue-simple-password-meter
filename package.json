@@ -58,6 +58,7 @@
   "repository": {
     "url": "https://github.com/miladd3/vue-simple-password-meter"
   },
+  "homepage": "https://github.com/miladd3/vue-simple-password-meter#readme",
   "resolutions": {
     "yargs-parser": "15.0.1"
   }
