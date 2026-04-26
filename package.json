@@ -64,7 +64,7 @@
   ],
   "license": "MIT",
   "repository": {
-    "url": "https://github.com/miladd3/vue-simple-password-meter"
+    "url": "git+https://github.com/miladd3/vue-simple-password-meter.git"
   },
   "homepage": "https://github.com/miladd3/vue-simple-password-meter#readme",
   "resolutions": {
