@@ -4,4 +4,3 @@ declare module 'vue-simple-password-meter' {
   const PasswordMeter: Component
   export default PasswordMeter
 }
-

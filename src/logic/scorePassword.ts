@@ -1,6 +1,6 @@
 import { isCommonPassword } from '@/logic/isCommonPassword'
 
-const scorePassword = (pass : string): number => {
+const scorePassword = (pass: string): number => {
   let score = 0
   let length = 0
   let specialChar = 0

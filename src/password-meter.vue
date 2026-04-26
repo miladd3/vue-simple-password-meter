@@ -4,7 +4,10 @@ import { checkStrength, scorePassword } from './logic'
 export default {
   name: 'PasswordMeter',
   props: {
-    password: String
+    password: {
+      type: String,
+      default: '',
+    },
   },
   emits: ['score'],
   computed: {
@@ -17,12 +20,11 @@ export default {
       this.$emit('score', { score, strength })
       return {
         [strength]: true,
-        scored: true
+        scored: true,
       }
-    }
-  }
+    },
+  },
 }
-
 </script>
 
 <template>
@@ -30,7 +32,6 @@ export default {
 </template>
 
 <style>
-
 .po-password-strength-bar {
   border-radius: 2px;
   transition: all 0.2s linear;

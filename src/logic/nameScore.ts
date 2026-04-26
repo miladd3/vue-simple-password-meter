@@ -1,4 +1,4 @@
-const nameScore = (score: number): string  => {
+const nameScore = (score: number): string => {
   switch (score) {
     case 0:
       return 'risky'
