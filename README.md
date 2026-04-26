@@ -6,7 +6,7 @@
 
 ## Demo
 
-[Demo](https://vspm-next.herokuapp.com/)
+[Demo](https://miladd3.github.io/vue-simple-password-meter/)
 
 ## Install
 
