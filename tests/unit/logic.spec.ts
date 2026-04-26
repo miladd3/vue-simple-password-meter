@@ -60,5 +60,45 @@ describe('scorePassword', () => {
 
   it('return risky empty = 0', () => {
     expect(scorePassword('')).toBe(0)
-  });
+  })
+
+  it('returns 0 for length 4', () => {
+    expect(scorePassword('ab1!')).toBe(0)
+  })
+
+  it('returns 0 for length 5', () => {
+    expect(scorePassword('abcde')).toBe(0)
+  })
+
+  it('returns 0 for length 8', () => {
+    expect(scorePassword('abcdefgh')).toBe(0)
+  })
+
+  it('returns 1 for length 9', () => {
+    expect(scorePassword('abcdefghi')).toBe(1)
+  })
+
+  it('returns 1 for length 12', () => {
+    expect(scorePassword('abcdefghijkl')).toBe(1)
+  })
+
+  it('returns 2 for length 13', () => {
+    expect(scorePassword('abcdefghijklm')).toBe(2)
+  })
+
+  it('returns 2 for length 20', () => {
+    expect(scorePassword('abcdefghijklmnopqrst')).toBe(2)
+  })
+
+  it('returns 3 for length 21', () => {
+    expect(scorePassword('abcdefghijklmnopqrstu')).toBe(3)
+  })
+
+  it('keeps length score at 1 for length 13 when repeated chars are present', () => {
+    expect(scorePassword('aaaaaabcdefgh')).toBe(1)
+  })
+
+  it('keeps length score at 1 for length 21 when repeated chars are present', () => {
+    expect(scorePassword('aaaaaabcdefghijklmnop')).toBe(1)
+  })
 })
