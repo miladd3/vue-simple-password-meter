@@ -1,20 +1,20 @@
 /// <reference types="vitest" />
-import { resolve } from 'path'
+import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue';
+import vue from '@vitejs/plugin-vue'
 import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js'
 
 export default defineConfig({
-  plugins: [vue(),cssInjectedByJsPlugin()],
+  plugins: [vue(), cssInjectedByJsPlugin()],
   resolve: {
     alias: {
-      '@': resolve(__dirname, './src'),
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
   build: {
     lib: {
       // Could also be a dictionary or array of multiple entry points
-      entry: resolve(__dirname, 'lib/main.ts'),
+      entry: fileURLToPath(new URL('./lib/main.ts', import.meta.url)),
       name: 'vue-simple-password-meter',
       // the proper extensions will be added
       fileName: 'vue-simple-password-meter'
